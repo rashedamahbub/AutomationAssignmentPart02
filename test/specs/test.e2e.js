@@ -5,6 +5,7 @@ import fileup from '../pageobjects/file.up.js'
 
 describe('Service7000 application', () => {
     it('should open Homepage', async () => {
+        console.log('home')
         await HomePage.open()
         await browser.pause(5000)
         await HomePage.tocallstarttenantflow()

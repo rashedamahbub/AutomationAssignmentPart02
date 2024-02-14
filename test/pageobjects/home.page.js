@@ -3,6 +3,7 @@ import Page from './page.js';
 // import path from 'node:path'
 import path from 'path';
 import { fileURLToPath } from 'url';
+import environment from '../../environment.js';
 //const path = require('path');
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -94,7 +95,9 @@ async fileUpload(url, locator) {
      * overwrite specific options to adapt it to page object
      */
     open () {
-        return super.open('');
+        // console.log('open')
+        // return browser.url(environment[process.env.ENV]);
+        return super.open();
     }
 
 }
